@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!------ocupando variables string con vue------>
+    <div id="app">
+        {{ message }}
+      </div>
+
+      <!------ocupando etiquetas con vuejs con vue------>
+      <div id="app-2">
+          <!----- v-bin atributo que está viendo se llama directiva 
+         v- para indicar que son atributos especiales proporcionados por Vu-->
+        <span v-bind:title="message">
+          Hover your mouse over me for a few seconds
+          to see my dynamically bound title!
+        </span>
+      </div>
+
+<!------ocupando if con boolean  con vue------>
+      <div id="app-3">
+        <span v-if="seen">Ahora me ves</span>
+      </div>
+<br>
+<!------ocupando ciclo for  con vue------>
+<div id="app-4">
+    <ol>
+      <li v-for="todo in todos">
+        {{ todo.text }}
+      </li>
+    </ol>
+  </div>
+
+<!------ocupando metodos con vue------>
+  <div id="app-5">
+    <p>{{ message }}</p>
+    <button v-on:click="reverseMessage">Reverse Message</button>
+  </div>
+      <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+
+  <script src="holamundo.js"></script>
+ 
+ 
+</body>
+</html>
